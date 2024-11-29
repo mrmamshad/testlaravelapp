@@ -2,30 +2,29 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+      "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+      }
     ],
     "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_URL": "https://testlaravel.vercel.app",
-        "APP_KEY": "base64:QqAgd0NaENAeXx+3nKGtpzY4zSHjav56X5bFdECZtoc=",
-
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+      "APP_ENV": "production",
+      "APP_DEBUG": "false",
+      "APP_URL": "https://testlaravel.vercel.app",
+      "APP_KEY": "base64:QqAgd0NaENAeXx+3nKGtpzY4zSHjav56X5bFdECZtoc=",
+      "APP_CONFIG_CACHE": "/tmp/config.php",
+      "APP_EVENTS_CACHE": "/tmp/events.php",
+      "APP_PACKAGES_CACHE": "/tmp/packages.php",
+      "APP_ROUTES_CACHE": "/tmp/routes.php",
+      "APP_SERVICES_CACHE": "/tmp/services.php",
+      "VIEW_COMPILED_PATH": "/tmp",
+      "CACHE_DRIVER": "array",
+      "LOG_CHANNEL": "stderr",
+      "SESSION_DRIVER": "cookie"
     },
-    "buildCommand": "curl -sS https://getcomposer.org/installer | php && php composer.phar install --no-dev --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache"
-}
+    "buildCommand": "composer install --no-dev --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+  }
+  
