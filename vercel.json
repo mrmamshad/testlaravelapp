@@ -27,5 +27,5 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
     },
-    "buildCommand": "composer install --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+    "buildCommand": "curl -sS https://getcomposer.org/installer | php && php composer.phar install --no-dev --optimize-autoloader && php artisan config:cache && php artisan route:cache && php artisan view:cache"
 }
